@@ -1,0 +1,36 @@
+div.body h1, div.body h2, div.body h3 {
+  font-family: sans-serif;
+}
+
+div.body p {
+  font-family: sans-serif;
+}
+
+div.footer {
+  font-family: sans-serif;
+}
+
+div.sphinxsidebar {
+  font-family: sans-serif;
+}
+
+div.sphinxsidebar ul li a {
+  color: rgb(0, 75, 107);
+}
+
+div.sphinxsidebar h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+div.sphinxsidebar h3 {
+  display: none;
+}
+
+div.sphinxsidebar p.caption {
+  font-weight: bold;
+}
+
+div.sphinxsidebar ul > li.toctree-l1 {
+  font-size: 0.75rem;
+}
