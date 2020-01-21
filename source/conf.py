@@ -15,6 +15,7 @@ html_show_copyright = False
 html_show_sourcelink = False
 html_show_sphinx = False
 html_static_path = ["_static"]
+html_title = "Practical Nix"
 html_theme = "alabaster"
 html_theme_options = {
     "description": "A practical guide to building software with Nix",

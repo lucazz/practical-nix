@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Introduction &#8212; Practical Nix latest documentation</title>
+    <title>Introduction &#8212; Practical Nix</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -95,6 +95,10 @@ package and notice it has a conflict with the previous version. It will then
 remove all files associated with the previous version, update its internal
 database that there’s no longer a conflicting PostgreSQL installed, and finally
 proceed with installing the new version with a new bynary at <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/postgres</span></code>.</p>
+<div class="sidebar">
+<p class="sidebar-title">What about Docker?</p>
+<p>TODO: Write how Docker relates to these issues</p>
+</div>
 <p>What if we want to have the two versions installed at the same time? It’s
 possible but brittle. Some package managers will, for example, installs Python
 2 as <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/python</span></code> and Python 3 at <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/python3</span></code>, and

@@ -1,3 +1,7 @@
+div.body div.sidebar p {
+  font-size: 0.8rem;
+}
+
 div.body h1, div.body h2, div.body h3 {
   font-family: sans-serif;
 }

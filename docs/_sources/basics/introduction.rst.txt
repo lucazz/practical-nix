@@ -29,6 +29,10 @@ remove all files associated with the previous version, update its internal
 database that there's no longer a conflicting PostgreSQL installed, and finally
 proceed with installing the new version with a new bynary at ``/usr/local/bin/postgres``.
 
+.. sidebar:: What about Docker?
+
+   TODO: Write how Docker relates to these issues
+
 What if we want to have the two versions installed at the same time? It's
 possible but brittle. Some package managers will, for example, installs Python
 2 as ``/usr/local/bin/python`` and Python 3 at ``/usr/local/bin/python3``, and
