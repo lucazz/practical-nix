@@ -10,7 +10,6 @@ in
 
 pkgs.stdenv.mkDerivation {
   name = "practical-nix";
-  src = ./.;
 
   buildInputs = [ pythonEnv ];
 }
