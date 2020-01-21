@@ -23,49 +23,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head><body>
-  <div class="document">
-    
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">Practical Nix</a></h1>
+  
 
-
-
-<p class="blurb">A practical guide to building software with Nix</p>
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Basics</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#the-problem">The Problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-nix">Why Nix?</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="anatomy-of-a-derivation.html">Anatomay of a Derivation</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Build Environments</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../build-environments/c-and-cpp.html">C and C++</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../build-environments/javascript.html">JavaScript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../build-environments/python.html">Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../build-environments/ruby.html">Ruby</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Deployment</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../packaging-and-deployment/nixos.html">NixOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../packaging-and-deployment/docker-images.html">Docker Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../packaging-and-deployment/ci-services.html">CI Services</a></li>
-</ul>
-
-
-        </div>
-      </div>
+    <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           
@@ -95,10 +55,6 @@ package and notice it has a conflict with the previous version. It will then
 remove all files associated with the previous version, update its internal
 database that there’s no longer a conflicting PostgreSQL installed, and finally
 proceed with installing the new version with a new bynary at <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/postgres</span></code>.</p>
-<div class="sidebar">
-<p class="sidebar-title">What about Docker?</p>
-<p>TODO: Write how Docker relates to these issues</p>
-</div>
 <p>What if we want to have the two versions installed at the same time? It’s
 possible but brittle. Some package managers will, for example, installs Python
 2 as <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/python</span></code> and Python 3 at <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/python3</span></code>, and
@@ -139,8 +95,56 @@ package.</p>
           
         </div>
       </div>
-    <div class="clearer"></div>
-  </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/nix-logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Practical Nix</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A practical guide to building software with Nix</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Basics</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-problem">The Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-nix">Why Nix?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="anatomy-of-a-derivation.html">Anatomay of a Derivation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Build Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../build-environments/c-and-cpp.html">C and C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build-environments/javascript.html">JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build-environments/python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build-environments/ruby.html">Ruby</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Deployment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../packaging-and-deployment/nixos.html">NixOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packaging-and-deployment/docker-images.html">Docker Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packaging-and-deployment/ci-services.html">CI Services</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
     <div class="footer">
       
       

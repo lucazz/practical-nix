@@ -1,3 +1,7 @@
+div.body div.sidebar p {
+  font-size: 0.8rem;
+}
+
 div.body h1, div.body h2, div.body h3 {
   font-family: sans-serif;
 }
@@ -12,6 +16,11 @@ div.footer {
 
 div.sphinxsidebar {
   font-family: sans-serif;
+}
+
+div.sphinxsidebar img.logo{
+  font-family: sans-serif;
+  width: 60%;
 }
 
 div.sphinxsidebar ul li a {

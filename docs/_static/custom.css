@@ -18,6 +18,11 @@ div.sphinxsidebar {
   font-family: sans-serif;
 }
 
+div.sphinxsidebar img.logo{
+  font-family: sans-serif;
+  width: 60%;
+}
+
 div.sphinxsidebar ul li a {
   color: rgb(0, 75, 107);
 }

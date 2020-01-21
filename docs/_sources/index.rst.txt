@@ -14,6 +14,9 @@ Once you are done with the basics, jump over to the build environment that is
 relevant to you, and pick an appropriate deployment target. That should cover
 the overall process of building and shipping a software package using Nix.
 
+The Nix logo is made available under a `CC-BY license
+<https://creativecommons.org/licenses/by/4.0/>`_.
+
 .. toctree::
    :caption: Basics
    :maxdepth: 2

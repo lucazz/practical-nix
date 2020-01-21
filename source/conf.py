@@ -19,8 +19,9 @@ html_title = "Practical Nix"
 html_theme = "alabaster"
 html_theme_options = {
     "description": "A practical guide to building software with Nix",
-    "fixed_sidebar": True,
-    "fixed_sidebar": True,
+    "logo": "nix-logo.svg",
+    "logo_name": True,
+    "logo_text_align": "center",
     "show_powered_by": False,
 }
 html_sidebars = {"**": ["about.html", "navigation.html"]}
