@@ -41,7 +41,11 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Basics</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-problem">The Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-nix">Why Nix?</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="anatomy-of-a-derivation.html">Anatomay of a Derivation</a></li>
 </ul>
@@ -70,6 +74,60 @@
             
   <div class="section" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Nix is a a package manager for Linux and other Unix systems, and it solves two
+issues that are inherent to most other package managers. In addition to being a
+package manager, Nix is also the programming language you use to write package
+specifications (called derivations) for the Nix package manager.</p>
+<p>In this chapter, you’ll see what those issues are and how Nix addresses them.</p>
+<div class="section" id="the-problem">
+<h2>The Problem<a class="headerlink" href="#the-problem" title="Permalink to this headline">¶</a></h2>
+<p>Say you are working on a web application, and you have a relational database
+running on PostgreSQL, and your application expects a PostgreSQL 10 server to
+be available in order to function. If you are on an Ubuntu Linux computer, you
+probably ran <code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">postgresql-11</span></code> which installed, among different
+files, a binary at <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/postgres</span></code> which you can use to start the
+database server.</p>
+<p>PostgreSQL 12 has been around for a while, and it has some interesting features
+that you want to try out. If you are on a recent version of Ubuntu Linux, you
+can run <code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">postgresql-12</span></code> to upgrade the database server.</p>
+<p>APT (the Ubuntu package manager) will fetch the metadata for the new PostgreSQL
+package and notice it has a conflict with the previous version. It will then
+remove all files associated with the previous version, update its internal
+database that there’s no longer a conflicting PostgreSQL installed, and finally
+proceed with installing the new version with a new bynary at <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/postgres</span></code>.</p>
+<p>What if we want to have the two versions installed at the same time? It’s
+possible but brittle. Some package managers will, for example, installs Python
+2 as <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/python</span></code> and Python 3 at <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/python3</span></code>, and
+you will have to adjust your programs and scripts to be aware of the different
+binary names.</p>
+<div class="section" id="nested-package-management">
+<h3>Nested Package Management<a class="headerlink" href="#nested-package-management" title="Permalink to this headline">¶</a></h3>
+<p>If you work on a high-level programming language such as Ruby or JavaScript,
+you are probably are not using just the operating system package manager.
+Because packages in these languages are generally smaller in size and developed
+at a faster pace, developers of the these languages end up installing a single
+OS-level package which is also a package manager for other langauge-specific
+packages.</p>
+<p>To make things worse, these high-level languages have package managers for
+managing different versions of the language. If you are a Ruby developer on
+macOS, you probably use homebrew for managing OS-level packages, something like
+RVM for managing different versions of Ruby, and finally RubyGems for managing
+your Ruby-specific packages.</p>
+</div>
+</div>
+<div class="section" id="why-nix">
+<h2>Why Nix?<a class="headerlink" href="#why-nix" title="Permalink to this headline">¶</a></h2>
+<p>Nix makes package management purely functional and immutable.</p>
+<p>That installed packages no longer mutate the global state of the operating
+system. There is no <code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code> in the Nix store (where Nix package are
+installed). If can’t just install Flash and have Firefox suddenly playing Flash
+content unless you made Flash one of the inputs when building Firefox.</p>
+<p>Also, there are no more dynamic libraries such as glibc and zlib that are
+globally shared by packages that expect them to exist at certain locations.
+Each package determines its own inputs and can only see them. In practice, you
+can not break the installation of a package but making changes to another
+package.</p>
+</div>
 </div>
 
 
