@@ -89,20 +89,27 @@ RVM for managing different versions of Ruby, and finally RubyGems for managing
 your Ruby-specific packages.</p>
 </div>
 </div>
-<div class="section" id="why-nix">
-<h2>Why Nix?<a class="headerlink" href="#why-nix" title="Permalink to this headline">¶</a></h2>
-<p>Nix makes package management purely functional and immutable.</p>
-<p>That installed packages no longer mutate the global state of the operating
-system. There is no <code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code> in the Nix store (where Nix package are
-installed). If can’t just install Flash and have Firefox suddenly playing Flash
-content unless you made Flash one of the inputs when building Firefox.</p>
-<p>Also, there are no dynamic libraries (e.g. glibc and zlib) that are globally
-shared by packages and expected to exist at certain locations. Each package
-determines its own inputs and can only see them. You can not break the
-installation of a package but making changes to another package.</p>
+<div class="section" id="the-nix-way">
+<h2>The Nix Way<a class="headerlink" href="#the-nix-way" title="Permalink to this headline">¶</a></h2>
+<p>Nix makes package management purely functional and immutable. That means every
+package (and every new version of a package) is installed to a new, separate
+location. It also means that packages only dependent on the inputs used to build
+it.</p>
+<p>Let’s go back to the Python version example. When you ask Nix to install Python
+3, it will create a new directory at something like
+<code class="docutils literal notranslate"><span class="pre">/nix/store/zqr5sy6dxnas41s0axyhhvlqnhwj0ywk-python3-3.7.5/</span></code>. The random
+string before the package name is the unique identifier of that package and is
+calculated based on the build inputs. If you try to install the same version of
+Python (including build flags and dependecies) again, Nix will notice it already
+exists in the store and do nothing.</p>
+<p>You can then install Python 2 with no risk of conflict because the unique
+identifier and the package name are different. In fact, you can install
+variations of the same Python 3.7.5 with no problems.</p>
 <p>In practice, once you build and run a package successfully, you can expect it to
 continue to build and run indefinitely and independent of its external
 environment.</p>
+<p>Over the next two chapters you will learn how to manage packages with Nix and
+how to create your own.</p>
 </div>
 </div>
 
@@ -136,11 +143,12 @@ environment.</p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#the-problem">The Problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-nix">Why Nix?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-nix-way">The Nix Way</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="anatomy-of-a-derivation.html">Anatomay of a Derivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the-language.html">The Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a-first-derivation.html">A First Derivation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Build Environments</span></p>
 <ul>

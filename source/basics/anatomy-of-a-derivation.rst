@@ -1,2 +1,0 @@
-Anatomay of a Derivation
-========================

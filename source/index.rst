@@ -6,16 +6,15 @@ Nix.
 
 If you don't know what Nix is or why you should use it, read
 :doc:`basics/introduction` first. :doc:`basics/getting-started` will get you
-through installation and basic usage of Nix.
-:doc:`basics/anatomy-of-a-derivation` shows what a package specification in Nix
-looks like.
+through installation and basic usage of Nix.  :doc:`basics/a-first-derivation`
+shows what a package specification in Nix looks like.
 
 Once you are done with the basics, jump over to the build environment that is
 relevant to you, and pick an appropriate deployment target. That should cover
 the overall process of building and shipping a software package using Nix.
 
-The Nix logo is made available under a `CC-BY license
-<https://creativecommons.org/licenses/by/4.0/>`_.
+The Nix logo is `made available <https://github.com/NixOS/nixos-artwork>`_
+under a `CC-BY license <https://creativecommons.org/licenses/by/4.0/>`_.
 
 .. toctree::
    :caption: Basics
@@ -24,7 +23,8 @@ The Nix logo is made available under a `CC-BY license
 
    basics/introduction
    basics/getting-started
-   basics/anatomy-of-a-derivation
+   basics/the-language
+   basics/a-first-derivation
 
 .. toctree::
    :caption: Build Environments
